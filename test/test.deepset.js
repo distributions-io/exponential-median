@@ -5,7 +5,7 @@
 
 var // Expectation library:
 	chai = require( 'chai' ),
-	
+
 	// Deep close to:
 	deepCloseTo = require( './utils/deepcloseto.js' ),
 
@@ -45,7 +45,7 @@ describe( 'deepset median', function tests() {
 			{'x':0.1732868}
 		];
 
-		assert.deepEqual( data, expected );
+		assert.isTrue( deepCloseTo( data, expected, 1e-5 ) );
 
 		// Custom separator...
 		data = [
@@ -63,7 +63,7 @@ describe( 'deepset median', function tests() {
 			{'x':[9,0.1732868]}
 		];
 
-		assert.deepEqual( data, expected, 'custom separator' );
+		assert.isTrue( deepCloseTo( data, expected, 1e-5 ), 'custom separator' );
 	});
 
 	it( 'should return an empty array if provided an empty array', function test() {

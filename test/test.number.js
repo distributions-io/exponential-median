@@ -35,7 +35,8 @@ describe( 'number median', function tests() {
 	});
 
 	it( 'should return `NaN` for invalid values of parameter lambda', function test() {
-		assert.isTrue( isnan( mean( -1 ) ) );
+		assert.isTrue( isnan( median( -1 ) ) );
+		assert.isTrue( isnan( median( 0 ) ) );
 	});
 
 });

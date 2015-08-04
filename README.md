@@ -2,16 +2,16 @@ Median
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> [exponential](https://en.wikipedia.org/wiki/exponential_distribution) distribution [median](https://en.wikipedia.org/wiki/median).
+> [Exponential](https://en.wikipedia.org/wiki/exponential_distribution) distribution [median](https://en.wikipedia.org/wiki/median).
 
-The [median](https://en.wikipedia.org/wiki/median) for a [exponential](https://en.wikipedia.org/wiki/exponential_distribution) random variable is
+The [median](https://en.wikipedia.org/wiki/median) for an [exponential](https://en.wikipedia.org/wiki/exponential_distribution) random variable is
 
-<div class="equation" align="center" data-raw-text="\operatorname{}\left[ X \right] = " data-equation="eq:median">
-	<img src="" alt="median for a exponential distribution.">
+<div class="equation" align="center" data-raw-text="\operatorname{median}\left( X \right) = \frac{1}{\lambda} \ln(2)" data-equation="eq:median">
+	<img src="https://cdn.rawgit.com/distributions-io/exponential-median/ed8aa9aba6b3ccc95fa14558cd514019228ad3c6/docs/img/eqn.svg" alt="Median for a exponential distribution.">
 	<br>
 </div>
 
-where `0 &lt;=lambda&lt;= 1` is the rate parameter.
+where `lambda > 0` is the rate parameter.
 
 
 ## Installation
@@ -31,7 +31,7 @@ var median = require( 'distributions-exponential-median' );
 
 #### median( lambda[, opts] )
 
-Computes the [median](https://en.wikipedia.org/wiki/median) for a [exponential](https://en.wikipedia.org/wiki/exponential_distribution) distribution with parameter `lambda` . `lambda` may be either a [`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), an [`array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), a [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays), or a [`matrix`](https://github.com/dstructs/matrix).
+Computes the [median](https://en.wikipedia.org/wiki/median) for an [exponential](https://en.wikipedia.org/wiki/exponential_distribution) distribution with parameter `lambda`. `lambda` may be either a [`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), an [`array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), a [`typed array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays), or a [`matrix`](https://github.com/dstructs/matrix).
 
 ``` javascript
 var matrix = require( 'dstructs-matrix' ),
@@ -43,7 +43,7 @@ var matrix = require( 'dstructs-matrix' ),
 
 
 out = median( 0.5 );
-// returns ~1.3862944
+// returns ~1.386
 
 lambda = [ 0.5, 1, 2, 4 ];
 out = median( lambda );
